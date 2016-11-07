@@ -4,8 +4,10 @@ class Hamming {
       throw new Error('DNA strands must be of equal length.')
     }
     let count=0
-    for (let i=0; i<str1.length; i++){
-      if (str1.charAt(i)!== str2.charAt(i)){
+    let pos = -1
+    for (let a of str1){
+      pos++
+      if (a !== str2[pos]){
         count++
       }
     }
